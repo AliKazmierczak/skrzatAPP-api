@@ -11,7 +11,8 @@ router.get('/plants', async (res) => {
 });
 
 router.get('/plants/:plantId', async (req, res) => {
-    if (!ObjectId.isValid(req.params.plantId)) return res.status(422).send(`Invalid ID`);
+    if (!ObjectId.isValid(req.params.plantId)) return res.status(422)
+      .send(`Invalid ID`);
 
     const plant = await Plant.findById(req.params.plantId);
     if(!plant) return res.status(404).send('This plant does not exist.');
@@ -26,7 +27,7 @@ router.get('/plants/:plantName', async (req, res) => {
     res.send(plant);   
 });
 
-router.post('/plants', async (req,res)=>{    
+router.post('/plants', async (req, res)=>{    
     let old = await Plant.findOne({name: req.body.name});    
     if (old) {                               
         return res.send('This plant already exists in the database');
@@ -100,7 +101,7 @@ router.patch("/plants/:plantId", async (req, res) => {
   
     try {
       var updatedPlant = await Plant.findByIdAndUpdate(
-        req.params.contentId,
+        req.params.plantId,
         fieldsToUpdate,
         { new: true, runValidators: true }
       );
