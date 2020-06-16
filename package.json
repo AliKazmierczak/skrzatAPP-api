@@ -1,0 +1,31 @@
+{
+  "name": "skrzatAPP-api",
+  "version": "1.0.0",
+  "description": "A gardener's helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AliKazmierczak/gardenSprite.git"
+  },
+  "keywords": [
+    "garden",
+    "crops",
+    "harvest",
+    "calendar"
+  ],
+  "author": "Alicja Kazmierczak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliKazmierczak/gardenSprite/issues"
+  },
+  "homepage": "https://github.com/AliKazmierczak/gardenSprite#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13"
+  }
+}
